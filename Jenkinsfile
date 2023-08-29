@@ -1,6 +1,6 @@
 node {
           stage ('checkout'){
-           git branch: 'main', credentialsId: 'gitcredentials', url: 'https://github.com/Anusha0503/docker-2.git'
+           git branch: 'master', credentialsId: 'gitcredentials', url: 'https://github.com/Anusha0503/docker-2.git'
  
          }
    stage ('build'){ 
