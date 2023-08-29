@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: docker-2-container
-        image: mydocker1405/docker-2:5
+        image: mydocker1405/docker-2:2
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
