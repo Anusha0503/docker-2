@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-2-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-2
+  template:
+    metadata:
+      labels:
+        app: docker-2
+    spec:
+      containers:
+      - name: docker-2-container
+        image: mydocker1405/docker-2:5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+      imagePullSecrets:
+        - name: springboot1secret
